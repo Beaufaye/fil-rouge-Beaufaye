@@ -59,8 +59,8 @@
           <div class="card" style="border-radius: 1rem;">
             <div class="row g-0">
               <div class="col-md-6 col-lg-5 d-none d-md-block bg- text-center">
-                <img src="assets\img\logo2.png"
-                  alt="login form" style="margin-top: 220px" />
+                <img src="ass\img\logo2.png"
+                  alt="login form" style="margin-top: 170px; width:350px" />
               </div>
               <div class="col-md-6 col-lg-7 d-flex align-items-center bg-secondary">
                 <div class="card-body p-4 p-lg-5 text-black">

@@ -51,8 +51,8 @@
                       <main id="main" class="main">
 
                         <div class="pagetitle col-lg-8 text-center ">
-                          <img src="assets\img\logo2.png"
-                          alt="login form" />
+                          <img src="ass\img\logo2.png"
+                          alt="login form" style="width:150px" />
                         </div><!-- End Page Title -->
                         <section class="section dashboard">
                       
@@ -132,13 +132,18 @@
                                       <option value="VF">VF</option>
                                       <option value="VOSTFR">VOST FR</option>
                                   </select>
-                           
                                 </div>
                                 </div>
                                 <div class="mb-3 row">
                                   <label for="photo" class="col-sm-2 col-form-label">Photo</label>
                                   <div class="col-sm-10">
                                     <input type="file" name="image" class="form-control" required>
+                                  </div>
+                                </div>
+                                <div class="mb-3 row">
+                                  <label for="lien" class="col-sm-2 col-form-label">Lien de la Bande annonce</label>
+                                  <div class="col-sm-10">
+                                    <input type="text" name="lien" class="form-control" required>
                                   </div>
                                 </div>
                                 

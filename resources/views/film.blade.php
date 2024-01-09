@@ -134,16 +134,16 @@
                                   <div class="row">
                                      @foreach ($film as $film)
                                        <div class="card col-xxl-3 col-md-4" style="">
-                                        
-                                          <img src="{{asset('Uploads/film/' . $film->image) }}" class="" alt="...">
-                                       
-                                           
+                                          <img src="{{asset('Uploads/photos/' . $film->image) }}" class="" alt="...">
                                            <div class="card-body">
                                              <h4 class="text-center">{{ $film->nom}}</h4>
                                            </div>
                                          </div>
                                      @endforeach
                                    </div>
+
+                                   
+
                                  </div> 
                         
                               </div>

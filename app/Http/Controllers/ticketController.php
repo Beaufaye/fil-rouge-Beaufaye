@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\ticket;
 
+
 class ticketController extends Controller
 {
     /**
@@ -16,7 +17,7 @@ class ticketController extends Controller
         return view('ticket', compact('ticket'));
     }
 
-
+   
     /**
      * Show the form for creating a new resource.
      */

@@ -1,6 +1,6 @@
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
-    <a class="navbar-brand ps-3" href="{{route('dashboard')}}">Canal <span class="text-danger">Olympia</span></a>
+    <a class="navbar-brand ps-3 text-primary" href="{{route('dashboard')}}">Ciné <span class="text-danger">Burkina</span></a>
 
     <!-- Sidebar Toggle-->
     <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>

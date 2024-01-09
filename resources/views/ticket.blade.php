@@ -111,9 +111,24 @@
 <br>
 <br>
 <br>
-      <h2 class="text-light text-center">Pour payer votre ticket veuillez tapez:</h2>
-      <h4 class="text-primary text-center">*144*3*2*43546#</h4>
-     
+       <h2 class="text-light text-center">Pour payer votre ticket veuillez tapez:</h2>
+      <h4 class="text-primary text-center">*144*3*2*43546#</h4> 
+      {{-- <div class="mb-3 m-5 row">
+        <label for="" class="col-sm-2 col-form-label text-light">Numéro de téléphone</label>
+        <div class="col-sm-10">
+          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+        </div>
+      </div>
+      <div class="mb-3 m-5 row">
+        <label for="" class="col-sm-2 col-form-label text-light">Ticket</label>
+        <div class="col-sm-10">
+          <select name="" id="">
+            <option value="Standard">Ticket Standard 2000fcfa</option>
+            <option value="VIP">Ticket VIP 2500fcfa</option>
+          </select>
+        </div>
+      </div>
+       --}}
   </section>
   </body>
   

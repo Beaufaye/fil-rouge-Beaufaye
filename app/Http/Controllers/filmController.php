@@ -42,12 +42,14 @@ class filmController extends Controller
             $file = $request->file('image');
             $extension = $file->getClientOriginalExtension();
             $filename = time() . '.' . $extension;
-            $file->move('Uploads/film/', $filename);
+            $file->move('Uploads/photos/', $filename);
             $film->image = $filename;
         }else {
             return $request;
             $film->image = '';
         }
+        $film->lien = $request->lien;
+       
 
         $film->save();
 
@@ -71,7 +73,18 @@ class filmController extends Controller
         $film->jour = $request->jour;
         $film->heure = $request->heure;
         $film->version = $request->version;
-        $film->image = $request->image;
+        if ($request->hasFile('image')) {
+            $file = $request->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $filename = time() . '.' . $extension;
+            $file->move('Uploads/photos/', $filename);
+            $film->image = $filename;
+        }else {
+            return $request;
+            $film->image = '';
+        }
+        $film->lien = $request->lien;
+       
         $film->update();
 
         return redirect('film')->with('status', 'Le film a bien été modifié.');

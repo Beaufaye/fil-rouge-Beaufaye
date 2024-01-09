@@ -21,6 +21,7 @@ return new class extends Migration
             $table->string('heure');
             $table->string('version');
             $table->string('image');
+            $table->string('lien');
             $table->timestamps();
         });
     }
