@@ -105,30 +105,68 @@
 
   <section id="">
    
-      <marquee behavior="" direction="" class="text-light">Payez vos tickets depuis chez vous</marquee>
-<br>
-<br>
-<br>
-<br>
-<br>
-       <h2 class="text-light text-center">Pour payer votre ticket veuillez tapez:</h2>
-      <h4 class="text-primary text-center">*144*3*2*43546#</h4> 
-      {{-- <div class="mb-3 m-5 row">
-        <label for="" class="col-sm-2 col-form-label text-light">Numéro de téléphone</label>
-        <div class="col-sm-10">
-          <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="email@example.com">
+       <h2 class="text-light text-center">Veuillez remplir le formulaire pour procéder à votre paiement</h2>
+      
+       <form action="" method="POST" class="container"> 
+        @csrf 
+         
+        <div class=" form-group"> 
+          <label class="text-light" for="card_number">Nom et Prénom :</label> 
+          <input type="text" name="card_number" id="card_number" class="form-control"> 
+        </div> 
+        <div class="form-group "> 
+          <label class="text-light" for="amount">Film :</label> 
+          <select name="etudiant" class="form-select" required>
+            <option>Choisissez le film</option>
+            @foreach ($film as $film)
+            <option value="{{ $film->nom }}">{{ $film->nom }}</option>
+            @endforeach
+        </select>
         </div>
-      </div>
-      <div class="mb-3 m-5 row">
-        <label for="" class="col-sm-2 col-form-label text-light">Ticket</label>
-        <div class="col-sm-10">
-          <select name="" id="">
-            <option value="Standard">Ticket Standard 2000fcfa</option>
-            <option value="VIP">Ticket VIP 2500fcfa</option>
-          </select>
+        <div class="form-group"> 
+          <label class="text-light" for="expiry_date">Choisissez le ticket :</label> 
+          <select class="form-select" id="selectInput" onchange="updateSecondInput()" required> 
+            <option disabled selected hidden class="font-italic">choisissez</option>
+            <option value="standard">Standard</option> 
+            <option value="vip" >VIP</option> 
+          </select> 
+        </div> 
+        <div class="form-group"> 
+          <label class="text-light" for="cvv">Prix :</label> 
+          <input class="form-control" type="text" id="secondInput" désactivé /> 
+        </div> 
+        <div class="form-group">
+          
+         
+          <script> function updateSecondInput() { 
+            var selectValue = document.getElementById("selectInput").value; 
+            var secondInput = document.getElementById("secondInput"); 
+            if (selectValue === "standard") 
+            { secondInput.value = "2000f"; } 
+            else if (selectValue === "vip") 
+            { secondInput.value = "2500f"; } secondInput.disabled = false; 
+          } 
+            </script>
         </div>
-      </div>
-       --}}
+        <div class="form-group">
+          <label class="text-light" for="cvv">Choisissez un moyen de paiement :</label><br>
+           <input onclick="uncheckOther(this)" type="checkbox" id="cb1" name="payment" value="carte">
+           <label class="text-light" for="cb1"><img src="assets/img/a.jpg" style="width: 100px"></label><br> 
+           <input onclick="uncheckOther(this)" type="checkbox" id="cb2" name="payment" value="paypal"> 
+           <label class="text-light" for="cb2"><img src="assets/img/ligdicash.png" style="width: 100px"></label><br> 
+        </div>
+
+        <style> .form-check { display: flex; align-items : center; } </style>
+        <script> function uncheckOther(checkbox) 
+        { var checkboxes = document.getElementsByName ("payment"); 
+        checkboxes.forEach(function(currentCheckbox) 
+        { if (currentCheckbox !== checkbox) 
+        { currentCheckbox.checked = false; } }); 
+        } 
+        </script>
+        
+        <button type="submit" class="btn btn-primary mt-2 text-center">Procéder</button> 
+      </form>
   </section>
   </body>
   

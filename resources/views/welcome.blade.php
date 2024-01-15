@@ -1,96 +1,3 @@
-{{-- <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    @include('layouts.style')
-    
-</head>
-  
-<body class="bg-dark">
-
-  <style>
-    .bloc{
-    position: relative;  
-    height: 86vh;
-    width: 980px;
-    overflow: hidden;
- 
-}
-
-  .slider{
-    position: relative;
-    box-shadow: 0px 0px black;   
-    border-radius : 3%; 
-  }
-
-  .slider video{
-    object-fit: cover;
-    pointer-events: none;
-    filter: brightness(35%)
-  }
-
-  .slider p{
-    position: absolute;
-    top: 75%;
-    left: 10%;
-    color: #fff;
-  }
-  .slider h1{
-    position: absolute;
-    top: 60%;
-    left: 10%;
-    color: #D4AF37;
-    font-size:4rem;
-  }
-
-  .voir{
-    position: absolute;
-    top: 90%;
-    left: 10%;
-  }
-  </style> 
-
-<div class="row mt-3">
-  <div class="row col-lg-8">
-<img src="assets\img\logo2.png" alt="eciné" href="#" style="width: 150px">
-<input type="text" placeholder="Rechercher des films" style="width: 500px; color:black">
-  </div>
-
-  <div class="col-lg-4 ">
-<a href="{{route('register')}}"><button class="btn btn-light">S'inscrire</button></a>
-<a href="{{route('login')}}"><button class="btn btn-danger">Se connecter</button></a>
-  </div>
-</div>
-
-<div class="row mt-2 bg-secondary ">
-<div class="col-lg-6 bloc m-4 slider">
- <video playsinline autoplay muted loop><source src="golden.mp4"></video>
-  <h1>Golden</h1>
-  <p>Construite autour du personnage principal Jams, «Golden» met en exergue une
-     famille qui se bat pour sauver son patrimoine qu’elle a mis 30 ans à construire. 
-     Cela contre une horde d’ennemis qui sont prêts à user de toutes <br> les stratégies 
-     pour la détruire...</p>
-  <a class="voir" href=""><button class="btn btn-danger">Payer un ticket</button></a>
-</div>
-<div class="col-lg-3 mt-3">
-  <img src="assets\img\mi.jpg"  style="width: 200px; margin-top: 8px; box-shadow: 0px 0px black; border-radius : 3%; ">
-  <h5 class="text-light"><a href="{{route('dashboard')}}" class="text-light">Mission: impossible - <br> Dead Reckoning Partie 1</a></h5>
-  <img src="assets\img\sp.jpg" alt="" style="width: 200px; margin-top: 10px; box-shadow: 0px 0px black; border-radius : 3%;">
-  <h5 class="text-light"><a href="{{route('dashboard')}}" class="text-light">SpiderMan</a></h5>
-  <img src="assets\img\m.jpg" alt="" style="width: 200px; margin-top: 10px; box-shadow: 0px 0px black; border-radius : 3%;">
-  <h5 class="text-light"><a href="{{route('dashboard')}}" class="text-light">MAMAN, j'ai encore <br>raté l'avion</a></h5>
-</div>
-</div>
-   
-
-
-
-  @include('layouts.js')
-</body>
-
-</html> --}}
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -1515,64 +1422,21 @@
 		
 
     </style>
+	
     <div class="card_wrapper">
       <div class="container">
           <div class="row">
-              <div class="col-12 text-center">
-                 
-              </div>
               <div class="col-12">
                   <div class="owl-carousel slider_carousel">
+					@foreach ($film as $gfilm)
                       <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-01.png" alt="">
+                          <img class="img-fluid w-100" src="{{asset('Uploads/photos/' . $gfilm->image) }}" alt="">
                           <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
+                              <h4 class="text-danger text-center">{{ $gfilm->nom}}</h4>
                           </div>
                       </div>
+					  @endforeach
                       
-                      <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-04.png" alt="">
-                          <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
-                          </div>
-                      </div>
-                      <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-05.png" alt="">
-                          <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
-                          </div>
-                      </div>
-                      <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-01.png" alt="">
-                          <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
-                          </div>
-                      </div>
-                      <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-03.png" alt="">
-                          <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
-                          </div>
-                      </div>
-                      <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-04.png" alt="">
-                          <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
-                          </div>
-                      </div>
-                      <div class="card_box">
-                          <img class="img-fluid w-100" src="card/img/slider-05.png" alt="">
-                          <div class="card_text">
-                              <h4>Profile ID: 23456</h4>
-                              <p>1901 Thornridge Cir. Shiloh, Hawaii 81063</p>
-                          </div>
-                      </div>
                   </div>
               </div>
           </div>
@@ -1631,113 +1495,7 @@
       </div>
     </section><!-- End Services Section -->
 
-    <!-- ======= Gallery Section ======= -->
-    <section id="gallery" class="gallery">
-      <div class="container-fluid">
-
-        <div class="row gy-4 justify-content-center">
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-          <div class="col-xl-3 col-lg-4 col-md-6">
-            <div class="gallery-item h-100">
-              <img src="assets/img/sira.jpg" class="img-fluid" alt="">
-              
-            </div>
-          </div><!-- End Gallery Item -->
-
-        </div>
-
-      </div>
-    </section><!-- End Gallery Section -->
- 
+   
   </main><!-- End #main -->
 
   
@@ -1764,25 +1522,14 @@
     function slider_carouselInit() {
         $('.owl-carousel.slider_carousel').owlCarousel({
             dots: false,
-            loop: true,
             margin: 30,
             stagePadding: 2,
-            autoplay: false,
+            autoplay: true,
             nav: true,
             navText: ["<i class='far fa-arrow-alt-circle-left'></i>","<i class='far fa-arrow-alt-circle-right'></i>"],
             autoplayTimeout: 1500,
             autoplayHoverPause: true,
-            responsive: {
-                0: {
-                    items: 1
-                },
-                768: {
-                    items: 2,
-                },
-                992: {
-                    items: 5
-                }
-            }
+           
         });
     }
     slider_carouselInit();

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\ticket;
+use App\Models\film;
 
 
 class ticketController extends Controller
@@ -14,7 +15,8 @@ class ticketController extends Controller
     public function ticket()
     {
         $ticket = ticket::all();
-        return view('ticket', compact('ticket'));
+        $film = film::all();
+        return view('ticket', compact('ticket','film'));
     }
 
    

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\alaf;
+use App\Models\film;
 
 class alafController extends Controller
 {
@@ -13,7 +14,8 @@ class alafController extends Controller
     public function alaf()
     {
         $alaf = alaf::all();
-        return view('alaf', compact('alaf'));
+        $film = film::all();
+        return view('alaf', compact('alaf','film'));
     }
 
     /**

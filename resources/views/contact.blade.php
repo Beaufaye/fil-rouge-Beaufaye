@@ -16,6 +16,7 @@
     <section id="contact" class="contact bg-secondary">
         <div class="container">
   
+    
           <div class="section-title">
             <span>Contact</span>
             <h2>Contact</h2>

@@ -5,7 +5,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
 
-    <title>Tableau de Bord</title>
+    <title>DASHBOARD</title>
     
     <link href="{{asset('https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css')}}" rel="stylesheet" />
     <link href="{{asset('css/styles.css')}}" rel="stylesheet" />

@@ -57,47 +57,64 @@
                            
                         </div>
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
                     <div class="sb-sidenav-footer">
                         <div class="small">Connecté en tant que:</div>
                         <p class="text-light">{{ Auth::user()->name }}</p>
                     </div>
                 </nav>
             </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
-                        <ol class="breadcrumb mb-4">
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
-                        <div class="row">
-                            <div class="card col-xl-3 col-md-6">
-                                <img src="assets\img\aze.jpeg" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <p class="card-text">Sira est un film dramatique, écrit et réalisé par Apolline Traoré avec des acteurs principaux tels que Nafissatou Cissé, Mike Danon, Lazare Minoungou, Nathalie Vairac et Ruth Werner.</p>
-                                </div>
-                              </div>
-                              <div class="card col-xl-3 col-md-6">
-                                <img src="assets\img\i.jpg" class="card-img-top" alt="..." style="height: 200px">
-                                <div class="card-body">
-                                  <p class="card-text">Un film interpellateur qui montre ce que l’ingratitude peut causer dans la vie de tout un chacun selon ses promoteurs.</p>
-                                </div>
-                              </div>
-                              <div class="card col-xl-3 col-md-6">
-                                <img src="assets\img\golden.jpg" class="card-img-top" alt="..." style="height: 200px">
-                                <div class="card-body">
-                                  <p class="card-text">Construite autour du personnage principal Jams, «Golden» met en exergue une
-                                    famille qui se bat pour sauver son patrimoine qu’elle a mis 30 ans à construire. 
-                                   </p>
-                                </div>
-                              </div>
-                              <div class="card col-xl-3 col-md-6">
-                                <img src="assets\img\wonka.jpg" class="card-img-top" alt="..." style="height: 200px">
-                                <div class="card-body">
-                                  <p class="card-text">Le jeune Willy Wonka, extraordinaire inventeur, magicien et chocolatier, tente de mettre en place une boutique de chocolat en ville.</p>
-                                </div>
-                              </div>
-                        </div>
+            
+            <div class="container-fluid pt-4 px-4">
+            <div class="row g-4">
+              <div class="col-sm-6 col-xl-4">
+                <div class="bg-primary rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="bi bi-people fa-3x text-primary"></i>
+                    <div class="ms-3">
+                        <p class="mb-2">FILMS</p>
+                        <h3 class="mb-0">6</h3>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col-sm-6 col-xl-4">
+              <div class="bg-danger rounded d-flex align-items-center justify-content-between p-4">
+                <i class="bi bi-film"></i>
+                  <div class="ms-3">
+                      <p class="mb-2">TICKETS PAYES</p>
+                      <h3 class="mb-0">82</h3>
+                  </div>
+              </div>
+              
+          </div>
+          <div class="col-sm-6 col-xl-4">
+            <div class="bg-warning rounded d-flex align-items-center justify-content-between p-4">
+                <i class="bi bi-people fa-3x text-primary"></i>
+                <div class="ms-3">
+                    <p class="mb-2">TICKETS DISPONIBLES</p>
+                    <h3 class="mb-0">68</h3>
+                </div>
+            </div>
+            
+        </div>
+            </div>
+            <div class="col-sm-6 col-xl-12 mt-3">
+              <img src="assets/img/mc.jpg" alt="" style="width: 1089px" class="text-center">
+              
+          </div>
+            </div>
                         
                         
                 @include('layouts.js')

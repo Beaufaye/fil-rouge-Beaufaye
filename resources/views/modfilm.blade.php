@@ -63,7 +63,7 @@
                           @endif
                           
                           <div class="row">
-                            <form action="{{route('filmst')}}" method="POST" class="form-group" enctype="multipart/form-data">
+                            <form action="{{route('upfilm')}}" method="POST" class="form-group" enctype="multipart/form-data">
                               @csrf
                               
                               <div class="mb-3 row">
